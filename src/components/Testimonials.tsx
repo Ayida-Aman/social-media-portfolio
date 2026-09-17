@@ -22,7 +22,7 @@ const testimonials: Testimonial[] = [
     id: "betel",
     name: "Betel Addisu",
     initials: "BA",
-    image: "/testimonials/meron.png",
+    image: "/testimonials/betel.png",
     role: "Ambassador",
     organization: "Women Techmakers Ethiopia",
     quote:
@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
     id: "meron",
     name: "Meron Abate",
     initials: "MA",
-    image: "/testimonials/betel.png",
+    image: "/testimonials/meron.png",
     role: "Project Lead",
     organization: "Her Whispers",
     quote:
