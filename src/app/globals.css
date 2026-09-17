@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
+@theme {
+  --font-display: var(--font-archivo), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-script: var(--font-caveat), cursive;
+
+  --color-bg: #f4f4f0;
+  --color-ink: #131310;
+  --color-ink-soft: #575751;
+  --color-ink-faint: #8c8b82;
+  --color-accent: #83c42e;
+  --color-accent-light: #a6e22e;
+  --color-accent-deep: #669c20;
+  --color-line: rgba(19, 19, 16, 0.12);
+  --color-surface: #ffffff;
+  --color-surface-dark: #1b1b18;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f4f4f0;
+  --ink: #131310;
+  --accent: #83c42e;
+  --accent-deep: #669c20;
+  --line: rgba(19, 19, 16, 0.12);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #83c42e;
+  selection-color: #131310;
+}
+
+::selection {
+  background-color: #83c42e;
+  color: #131310;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f4f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d5cd;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #83c42e;
+}
+
+.font-display {
+  font-family: var(--font-archivo), Impact, sans-serif;
+}
+
+.font-script {
+  font-family: var(--font-caveat), cursive;
 }
